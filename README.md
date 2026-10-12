@@ -170,3 +170,8 @@ yarn build
 - [복사 기준 및 출처](docs/SOURCE.md) · [원본 README](docs/README.original.md)
 
 이 저장소는 팀 공동 결과물의 포트폴리오용 복사본입니다. 개인 담당 범위는 홍유나의 백엔드 사용자 관련 기능입니다.
+
+
+## 프로젝트 회고
+
+회원·인증 백엔드 개발 경험과 개선 방향은 [홍유나의 원딜러 프로젝트 회고](https://github.com/h-yuna-lab/wondealer-backend#프로젝트-회고)에 정리했습니다.
