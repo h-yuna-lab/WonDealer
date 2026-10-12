@@ -33,7 +33,7 @@ JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화�
 | --- | --- |
 | [frontend](frontend/README.md) | React 사용자 화면, 화면 캡처, 프론트 실행 안내 |
 | [backend](backend/README.md) | Spring Boot API, 개인 담당 코드·API, 서버 설정 안내 |
-| [docs](docs/SOURCE.md) | 통합 기준 저장소·커밋·보존 범위 |
+| [SOURCE.md](SOURCE.md) | 통합 기준 저장소·커밋·보존 범위 |
 
 각 모듈의 소스·설정 예시·문서·이미지와 기존 커밋 이력을 가져왔습니다. 통합 저장소에서는 모듈 사이의 문서 링크와 최상위 안내를 정리했습니다.
 
@@ -91,6 +91,6 @@ npm start
 
 ## 출처
 
-- [통합 기준 및 출처 기록](docs/SOURCE.md)
+- [통합 기준 및 출처 기록](SOURCE.md)
 - 원본 팀 [프론트엔드](https://github.com/pyyzzz/wondealer-frontend) · [백엔드](https://github.com/pyyzzz/wondealer-backend)
 - [프로젝트 Notion](https://app.notion.com/p/3f6cb363cc93800a8270cb210d838dca)
