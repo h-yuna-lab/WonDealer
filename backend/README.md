@@ -232,13 +232,13 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 
 개인 역할·일정은 팀 Notion 자료를 참고했고, 기능·API·의존성은 지정된 `dev` 브랜치 코드를 확인하여 작성했습니다. 백엔드 애플리케이션 코드는 수정하지 않았으며, README·출처 문서·실행 설정 예시를 추가했습니다.
 
-이번 정리 환경에는 Java·MySQL 및 외부 서비스 인증 설정이 없어 백엔드 빌드·통합 실행을 검증하지 않았습니다. 프론트 빌드와 인증 관련 화면은 확인했으며 [Frontend의 화면 캡처](https://github.com/h-yuna-lab/wondealer-frontend#%EF%B8%8F-주요-화면)에서 볼 수 있습니다.
+이번 정리 환경에는 Java·MySQL 및 외부 서비스 인증 설정이 없어 백엔드 빌드·통합 실행을 검증하지 않았습니다. 프론트 빌드와 인증 관련 화면은 확인했으며 [Frontend의 화면 캡처](../frontend/README.md)에서 볼 수 있습니다.
 
 프론트 통합 브랜치와 백엔드 `dev`에는 상품 수정의 `PATCH`/`PUT` 등 일부 API 차이가 남아 있으므로 전체 기능 실행 전 연동 확인이 필요합니다.
 
 ## 🔗 관련 저장소·자료
 
-- 개인 포트폴리오 [Frontend](https://github.com/h-yuna-lab/wondealer-frontend) · [Backend](https://github.com/h-yuna-lab/wondealer-backend)
+- 개인 포트폴리오 [Frontend](../frontend/README.md) · [Backend](../backend/README.md)
 - 원본 팀 [Frontend](https://github.com/pyyzzz/wondealer-frontend/tree/feature/%EA%B9%80%ED%98%95%EC%A4%80-frontend-%ED%86%B5%ED%95%A9%EB%B3%B8) · [Backend](https://github.com/pyyzzz/wondealer-backend/tree/dev)
 - [프로젝트 Notion 문서](https://app.notion.com/p/3f6cb363cc93800a8270cb210d838dca) · 접근 권한이 필요할 수 있습니다.
 - [복사 기준 및 출처](docs/SOURCE.md)

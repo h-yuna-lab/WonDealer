@@ -84,7 +84,7 @@
 - **마이페이지:** 내 정보 조회·수정, 프로필 이미지 URL 반영, 비밀번호·계좌 정보 변경, 판매·거래·입찰 내역 조회를 제공합니다.
 - **계정 복구:** 이름·이메일 기반 아이디 찾기와 마스킹, 임시 비밀번호 발급·메일 발송을 처리합니다.
 
-구현 파일과 API 상세는 [Backend 저장소](https://github.com/h-yuna-lab/wondealer-backend)의 README에서 확인할 수 있습니다.
+구현 파일과 API 상세는 [Backend 저장소](../backend/README.md)의 README에서 확인할 수 있습니다.
 
 ## 👥 팀 구성
 
@@ -164,7 +164,7 @@ yarn build
 
 ## 🔗 관련 저장소·자료
 
-- 개인 포트폴리오 [Frontend](https://github.com/h-yuna-lab/wondealer-frontend) · [Backend](https://github.com/h-yuna-lab/wondealer-backend)
+- 개인 포트폴리오 [Frontend](../frontend/README.md) · [Backend](../backend/README.md)
 - 원본 팀 [Frontend](https://github.com/pyyzzz/wondealer-frontend/tree/feature/%EA%B9%80%ED%98%95%EC%A4%80-frontend-%ED%86%B5%ED%95%A9%EB%B3%B8) · [Backend](https://github.com/pyyzzz/wondealer-backend/tree/dev)
 - [프로젝트 Notion 문서](https://app.notion.com/p/3f6cb363cc93800a8270cb210d838dca) · 접근 권한이 필요할 수 있습니다.
 - [복사 기준 및 출처](docs/SOURCE.md) · [원본 README](docs/README.original.md)
@@ -174,4 +174,4 @@ yarn build
 
 ## 프로젝트 회고
 
-회원·인증 백엔드 개발 경험과 개선 방향은 [홍유나의 원딜러 프로젝트 회고](https://github.com/h-yuna-lab/wondealer-backend#프로젝트-회고)에 정리했습니다.
+회원·인증 백엔드 개발 경험과 개선 방향은 [홍유나의 원딜러 프로젝트 회고](../backend/README.md)에 정리했습니다.

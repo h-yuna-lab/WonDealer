@@ -47,11 +47,11 @@ JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화�
 | --- | --- |
 | ![로그인](frontend/docs/screenshots/login.jpg) | ![회원가입](frontend/docs/screenshots/signup.jpg) |
 
-아이디 찾기·비밀번호 재설정·라이트 테마는 [프론트 README](frontend/README.md#-주요-화면)에서 확인할 수 있습니다.
+아이디 찾기·비밀번호 재설정·라이트 테마는 [프론트 README](frontend/README.md)에서 확인할 수 있습니다.
 
 ## 실행 방법
 
-한 번 clone한 뒤 두 터미널에서 각 모듈을 실행합니다. Java 17·MySQL과 Node.js를 준비하고, 먼저 [백엔드 설정 안내](backend/README.md#️-실행-방법)에 따라 DB·JWT·메일·OAuth 등의 환경변수와 설정 파일을 준비합니다. 프론트 외부 서비스 설정은 [설정 예시](frontend/.env.example)를 참고합니다.
+한 번 clone한 뒤 두 터미널에서 각 모듈을 실행합니다. Java 17·MySQL과 Node.js를 준비하고, 먼저 [백엔드 설정 안내](backend/README.md)에 따라 DB·JWT·메일·OAuth 등의 환경변수와 설정 파일을 준비합니다. 프론트 외부 서비스 설정은 [설정 예시](frontend/.env.example)를 참고합니다.
 
 ### 터미널 1 · 백엔드
 
