@@ -16,6 +16,18 @@
 | 서비스 | 일반 판매, 실시간 경매, 거래 채팅, WonPay, 회원 관리 |
 | 기술 | React 18 · Java 17 · Spring Boot · Spring Security · JPA · MySQL |
 
+## 주요 기능
+
+| 영역 | 구현 내용 |
+| --- | --- |
+| 회원·인증 | 회원가입, 이메일 인증, 로그인, 구글 OAuth, 아이디 찾기, 비밀번호 재설정 |
+| 아이템 거래 | 게임·서버·카테고리 필터, 검색, 목록·상세, 판매 등록·수정 |
+| 실시간 경매 | 경매 목록·상세, 입찰, 즉시 낙찰, WebSocket을 통한 현재가 갱신 |
+| 거래 채팅 | 채팅방 목록, 메시지 송수신, 거래 상태 및 시스템 메시지 표시 |
+| WonPay·마이페이지 | 마일리지 충전·출금 UI, 회원 정보, 판매·구매·입찰 내역 |
+| 관리자 | 회원 제재, 상품 관리 화면 |
+| 테마 | 다크·라이트 테마, 반응형 스타일 |
+
 ## 홍유나 담당 업무
 
 - 회원가입: 이메일 인증, 이메일·아이디·닉네임 중복과 필수 약관 동의 검증
@@ -25,11 +37,21 @@
 - 마이페이지: 내 정보·비밀번호·계좌 변경, 본인의 판매·거래·입찰 내역 조회
 - 계정 복구: 아이디 찾기·마스킹, 임시 비밀번호 발급·메일 발송
 
-JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화면 전체는 팀의 담당 범위입니다. 개인 구현 파일·API와 팀 역할표는 [백엔드 README](backend/README.md)에 정리했습니다.
+JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화면 전체는 팀의 담당 범위입니다. 회원 기능의 구현 파일·API·상세 설정은 [백엔드 기술 안내](backend/README.md)에 있습니다.
+
+## 팀 구성
+
+| 이름 | 역할 | 주요 담당 |
+| --- | --- | --- |
+| 김현중 | 백엔드 | 프로젝트 기반, JWT/Security, WebSocket, 크롤링, 관리자 API, 배포 |
+| **홍유나** | **백엔드** | **회원가입·로그인, 이메일 인증, Google OAuth, 약관, 마이페이지, 계정 복구** |
+| 변후민 | 백엔드 | 상품·게임·서버·카테고리, 경매, WonPay, 거래·결제, 채팅 REST API |
+| 장미선 | 프론트엔드 | 메인, 상품 목록·상세, 등록 폼, 반응형, 결제 API 연동, 관리자 화면 |
+| 김형준 | 프론트엔드 | 회원·로그인 UI, 실시간 경매 UI, 채팅, 결제·WonPay UI |
 
 ## 저장소 구성
 
-| 폴더 | 내용 |
+| 위치 | 내용 |
 | --- | --- |
 | [frontend](frontend/README.md) | React 사용자 화면, 화면 캡처, 프론트 실행 안내 |
 | [backend](backend/README.md) | Spring Boot API, 개인 담당 코드·API, 서버 설정 안내 |
@@ -47,37 +69,48 @@ JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화�
 | --- | --- |
 | ![로그인](frontend/docs/screenshots/login.jpg) | ![회원가입](frontend/docs/screenshots/signup.jpg) |
 
-아이디 찾기·비밀번호 재설정·라이트 테마는 [프론트 README](frontend/README.md)에서 확인할 수 있습니다.
+<details>
+<summary>라이트 테마·아이디 찾기·비밀번호 재설정</summary>
+
+### 메인 · 라이트 테마
+
+![원딜러 메인 라이트 테마](frontend/docs/screenshots/main-light.jpg)
+
+### 아이디 찾기
+
+![아이디 찾기](frontend/docs/screenshots/find-id.jpg)
+
+### 비밀번호 재설정
+
+![비밀번호 재설정](frontend/docs/screenshots/reset-password.jpg)
+
+</details>
 
 ## 실행 방법
 
-한 번 clone한 뒤 두 터미널에서 각 모듈을 실행합니다. Java 17·MySQL과 Node.js를 준비하고, 먼저 [백엔드 설정 안내](backend/README.md)에 따라 DB·JWT·메일·OAuth 등의 환경변수와 설정 파일을 준비합니다. 프론트 외부 서비스 설정은 [설정 예시](frontend/.env.example)를 참고합니다.
+Java 17·MySQL·Node.js를 준비하고, [백엔드](backend/README.md)에서 DB·JWT·메일·OAuth 등의 설정을 먼저 확인합니다.
 
-### 터미널 1 · 백엔드
-
-통합 저장소 루트에서 실행합니다.
+통합 저장소 루트에서 각각 별도 터미널로 실행합니다.
 
 ```powershell
+# 터미널 1 · 백엔드
 cd backend
 .\gradlew.bat bootRun
 ```
 
-macOS/Linux에서는 `./gradlew bootRun`을 사용합니다.
-
-### 터미널 2 · 프론트엔드
-
-통합 저장소 루트에서 실행합니다.
-
 ```powershell
+# 터미널 2 · 프론트엔드
 cd frontend
 npm install
 npm start
 ```
 
-- 화면: `http://localhost:3000`
-- API: `http://localhost:8111`
-- DB·메일·OAuth·결제 설정을 포함한 상세 실행 조건은 각 모듈 README에 있습니다.
-- 프론트 호출과 백엔드 일부 API의 차이는 실제 전체 연동 전에 확인해야 합니다.
+화면은 `http://localhost:3000`, 서버는 `http://localhost:8111`입니다.
+
+| 상세 안내 | 내용 |
+| --- | --- |
+| [프론트 기술 안내](frontend/README.md) | API·WebSocket 주소, 외부 서비스 설정, 빌드 |
+| [백엔드 기술 안내](backend/README.md) | DB·인증·메일·OAuth·결제 설정, API·구현 파일, 빌드 |
 
 ## 확인 범위
 
