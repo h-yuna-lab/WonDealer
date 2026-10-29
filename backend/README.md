@@ -62,6 +62,8 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 
 ## 회원 기능 구현
 
+홍유나가 담당한 회원·인증 기능입니다. 같은 기능 안에서 팀원이 구현하거나 보완한 부분은 항목 옆에 표시했습니다.
+
 ### 1. 회원가입 및 약관 동의
 
 - 가입 전 이메일 인증 완료 여부 확인
@@ -96,7 +98,7 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 - Google OAuth2 사용자 정보 조회
 - 제공자·외부 사용자 ID를 내부 소셜 계정과 연결
 - 기존 이메일 회원 연결 또는 신규 회원 생성
-- 소셜 로그인 성공 후 JWT 발급·Refresh Token 저장·프론트 리디렉션 연계
+- 소셜 로그인 성공 후 JWT 발급·프론트 리디렉션 연계 (Refresh Token 저장과 소셜 회원 비밀번호 처리는 팀원 김현중 보완)
 
 관련 코드: [CustomOAuth2UserService](src/main/java/com/wondealer/service/CustomOAuth2UserService.java), [OAuth2SuccessHandler](src/main/java/com/wondealer/security/OAuth2SuccessHandler.java), [OauthAccount](src/main/java/com/wondealer/entity/OauthAccount.java)
 
@@ -105,8 +107,8 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 - 현재 로그인 회원의 정보 조회
 - 닉네임·전화번호·프로필 이미지 URL 수정
 - 현재 비밀번호 검증 후 새 비밀번호 암호화 저장
-- 은행명·계좌번호·예금주 등록 및 수정
-- 본인의 판매 상품·구매/판매 거래·입찰 내역을 페이지 단위로 조회
+- 계좌 정보 응답 DTO와 계좌번호 마스킹 (은행명·계좌번호·예금주 등록·수정의 기반 코드는 팀원 김현중 구현)
+- 본인의 판매 상품·구매/판매 거래·입찰 내역 페이지 조회 (팀원 김현중 구현)
 
 관련 코드: [MemberController](src/main/java/com/wondealer/controller/MemberController.java), [MemberService](src/main/java/com/wondealer/service/MemberService.java), [MemberResDto](src/main/java/com/wondealer/dto/response/MemberResDto.java)
 
@@ -146,7 +148,7 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 | 내 구매·판매 내역 | GET | `/api/members/me/trades` |
 | 내 입찰 내역 | GET | `/api/members/me/bids` |
 
-Google OAuth 진입·콜백 경로는 Spring Security가 처리합니다. API 목록은 이 복사본의 컨트롤러를 기준으로 작성했습니다.
+Google OAuth 진입·콜백 경로는 Spring Security가 처리합니다. API 목록은 이 복사본의 컨트롤러를 기준으로 작성했습니다. 내 판매 상품·구매/판매 내역·입찰 내역 API는 팀원(김현중)이 구현했습니다.
 
 ## 경매·거래 처리
 
