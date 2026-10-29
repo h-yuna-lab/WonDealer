@@ -148,17 +148,17 @@ Google OAuth 승인된 리디렉션 URI는 `http://localhost:8111/login/oauth2/c
 | 내 구매·판매 내역 | GET | `/api/members/me/trades` |
 | 내 입찰 내역 | GET | `/api/members/me/bids` |
 
-Google OAuth 진입·콜백 경로는 Spring Security가 처리합니다. API 목록은 이 복사본의 컨트롤러를 기준으로 작성했습니다. 내 판매 상품·구매/판매 내역·입찰 내역 API는 팀원(김현중)이 구현했습니다.
+Google OAuth 진입·콜백 경로는 Spring Security가 처리합니다. API 목록은 이 저장소의 컨트롤러를 기준으로 작성했습니다. 내 판매 상품·구매/판매 내역·입찰 내역 API는 팀원(김현중)이 구현했습니다.
 
 ## 경매·거래 처리
 
-입찰 시 `AuctionRepository`의 **비관적 쓰기 락**을 사용합니다. 입찰 금액·자기 상품 입찰·잔액 등을 검증하고 이전 최고 입찰자 환불 및 현재가 변경을 처리한 뒤, STOMP로 경매 상태를 전송합니다. 기획 문서의 낙관적 락 설명보다 복사본의 실제 구현을 기준으로 정리했습니다.
+입찰 시 `AuctionRepository`의 **비관적 쓰기 락**을 사용합니다. 입찰 금액·자기 상품 입찰·잔액 등을 검증하고 이전 최고 입찰자 환불 및 현재가 변경을 처리한 뒤, STOMP로 경매 상태를 전송합니다. 기획 문서에는 낙관적 락으로 적혀 있지만, 이 설명은 실제 구현을 기준으로 했습니다.
 
 거래 상태는 `PENDING_PAYMENT → PAID → COMPLETED`로 관리하며, 결제 완료 상태에서는 간이 에스크로로 보관하고 수령 확인 시 판매자 정산을 처리합니다. 
 
 ## 연동 전 확인사항
 
-이번 정리 환경에는 Java·MySQL 및 외부 서비스 인증 설정이 없어 백엔드 빌드·통합 실행을 검증하지 않았습니다. 프론트 빌드와 인증 관련 화면은 확인했으며 [Frontend의 화면 캡처](../frontend/README.md)에서 볼 수 있습니다.
+백엔드 빌드와 통합 실행은 검증하지 않았습니다. 프론트 빌드와 인증 관련 화면은 확인했으며 [Frontend의 화면 캡처](../frontend/README.md)에서 볼 수 있습니다.
 
 프론트 통합 브랜치와 백엔드 `dev`에는 상품 수정의 `PATCH`/`PUT` 등 일부 API 차이가 남아 있으므로 전체 기능 실행 전 연동 확인이 필요합니다.
 
@@ -166,4 +166,4 @@ Google OAuth 진입·콜백 경로는 Spring Security가 처리합니다. API �
 
 - [프로젝트 포트폴리오·팀 구성·회고](../README.md)
 - [프론트 실행·설정](../frontend/README.md)
-- [통합 출처](../SOURCE.md) · [백엔드 복사 기준](docs/SOURCE.md)
+- [통합 출처](../SOURCE.md) · [백엔드 출처 기록](docs/SOURCE.md)
