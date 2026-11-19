@@ -6,6 +6,33 @@
 
 **5인 팀 프로젝트를 홍유나의 개인 포트폴리오로 정리한 통합 저장소**입니다. 프론트엔드와 백엔드를 한곳에서 확인할 수 있으며, 홍유나의 개인 담당은 **백엔드 회원·인증 기능**입니다.
 
+## 주요 화면
+
+아래는 팀 React 코드를 실제 로컬 브라우저에서 실행해 촬영한 화면입니다. 백엔드·DB를 연결하지 않은 캡처이며, 매물·게임 순위는 빈 상태입니다.
+
+![원딜러 메인](frontend/docs/screenshots/main-dark.jpg)
+
+| 로그인 | 회원가입 |
+| --- | --- |
+| ![로그인](frontend/docs/screenshots/login.jpg) | ![회원가입](frontend/docs/screenshots/signup.jpg) |
+
+<details>
+<summary>라이트 테마·아이디 찾기·비밀번호 재설정</summary>
+
+### 메인 · 라이트 테마
+
+![원딜러 메인 라이트 테마](frontend/docs/screenshots/main-light.jpg)
+
+### 아이디 찾기
+
+![아이디 찾기](frontend/docs/screenshots/find-id.jpg)
+
+### 비밀번호 재설정
+
+![비밀번호 재설정](frontend/docs/screenshots/reset-password.jpg)
+
+</details>
+
 ## 프로젝트 개요
 
 | 항목 | 내용 |
@@ -59,33 +86,6 @@ JWT/Security 공통 인프라와 상품·경매·결제·채팅, 프론트 화�
 | [SOURCE.md](SOURCE.md) | 통합 기준 저장소·커밋·보존 범위 |
 
 각 모듈의 소스·설정 예시·문서·이미지와 기존 커밋 이력을 가져왔습니다. 통합 저장소에서는 모듈 사이의 문서 링크와 최상위 안내를 정리했습니다.
-
-## 주요 화면
-
-아래는 팀 React 코드를 실제 로컬 브라우저에서 실행해 촬영한 화면입니다. 백엔드·DB를 연결하지 않은 캡처이며, 매물·게임 순위는 빈 상태입니다.
-
-![원딜러 메인](frontend/docs/screenshots/main-dark.jpg)
-
-| 로그인 | 회원가입 |
-| --- | --- |
-| ![로그인](frontend/docs/screenshots/login.jpg) | ![회원가입](frontend/docs/screenshots/signup.jpg) |
-
-<details>
-<summary>라이트 테마·아이디 찾기·비밀번호 재설정</summary>
-
-### 메인 · 라이트 테마
-
-![원딜러 메인 라이트 테마](frontend/docs/screenshots/main-light.jpg)
-
-### 아이디 찾기
-
-![아이디 찾기](frontend/docs/screenshots/find-id.jpg)
-
-### 비밀번호 재설정
-
-![비밀번호 재설정](frontend/docs/screenshots/reset-password.jpg)
-
-</details>
 
 ## 실행 방법
 
